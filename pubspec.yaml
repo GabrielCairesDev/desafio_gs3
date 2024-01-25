@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.9
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -38,3 +39,10 @@ flutter:
     - assets/icons/icone_menu.svg
     - assets/icons/icone_mensagem.svg
     - assets/icons/icone_notificacao.svg
+    - assets/icons/icone_quatro_bolinhas.svg
+    - assets/icons/icone_olho.svg
+    - assets/icons/icone_personalizar.svg
+    - assets/icons/icone_cartao_virtual.svg
+    - assets/icons/icone_cartao_adicional.svg
+    - assets/icons/icone_seguros.svg
+    - assets/icons/icone_sms.svg
