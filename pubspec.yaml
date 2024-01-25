@@ -46,3 +46,11 @@ flutter:
     - assets/icons/icone_cartao_adicional.svg
     - assets/icons/icone_seguros.svg
     - assets/icons/icone_sms.svg
+    - assets/icons/icone_seta_direita.svg
+    - assets/icons/icone_smart_phone.svg
+    - assets/icons/icone_carro.svg
+    - assets/icons/icone_carrinho.svg
+    - assets/icons/icone_home.svg
+    - assets/icons/icone_fatura.svg
+    - assets/icons/icone_cartao.svg
+    - assets/icons/icone_shop.svg

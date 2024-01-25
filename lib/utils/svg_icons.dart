@@ -9,4 +9,12 @@ class SvgIcons {
   static String iconeCartaoAdicional = 'assets/icons/icone_cartao_adicional.svg';
   static String iconeSeguros = 'assets/icons/icone_seguros.svg';
   static String iconeSMS = 'assets/icons/icone_sms.svg';
+  static String iconeSetaDireita = 'assets/icons/icone_seta_direita.svg';
+  static String iconeSmartPhone = 'assets/icons/icone_smart_phone.svg';
+  static String iconeCarro = 'assets/icons/icone_carro.svg';
+  static String iconeCarrinho = 'assets/icons/icone_carrinho.svg';
+  static String iconeHome = 'assets/icons/icone_home.svg';
+  static String iconeFatura = 'assets/icons/icone_fatura.svg';
+  static String iconeCartao = 'assets/icons/icone_cartao.svg';
+  static String iconeShop = 'assets/icons/icone_shop.svg';
 }

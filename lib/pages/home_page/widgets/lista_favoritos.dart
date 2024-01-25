@@ -1,4 +1,4 @@
-import 'package:desafio_gs3/models/paginas_favoritas.dart';
+import 'package:desafio_gs3/models/paginas_favoritas_model.dart';
 import 'package:desafio_gs3/utils/colors_app.dart';
 import 'package:desafio_gs3/utils/svg_icons.dart';
 import 'package:flutter/material.dart';
@@ -30,16 +30,19 @@ class ListaFavoritos extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
-          margin: EdgeInsets.only(left: (index == 0) ? 20 : 35, right: (index == paginasFavoritas.length - 1) ? 20 : 0),
-          height: 66,
-          width: 66,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12.0),
-            color: const Color.fromRGBO(229, 229, 229, 0.20),
-          ),
-          child: Center(
-            child: SvgPicture.asset(_iconeBotoes(paginasFavoritas[index].paginaFavorita), height: 30, width: 30),
+        InkWell(
+          onTap: _funcoesBotoes(paginasFavoritas[index].paginaFavorita),
+          child: Container(
+            margin: EdgeInsets.only(left: (index == 0) ? 20 : 35, right: (index == paginasFavoritas.length - 1) ? 20 : 0),
+            height: 66,
+            width: 66,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.0),
+              color: const Color.fromRGBO(229, 229, 229, 0.20),
+            ),
+            child: Center(
+              child: SvgPicture.asset(_iconeBotoes(paginasFavoritas[index].paginaFavorita), height: 30, width: 30),
+            ),
           ),
         ),
         const SizedBox(height: 6),
@@ -85,6 +88,21 @@ class ListaFavoritos extends StatelessWidget {
         return SvgIcons.iconeSMS;
       default:
         return SvgIcons.iconeSMS;
+    }
+  }
+
+  _funcoesBotoes(int int) {
+    switch (int) {
+      case 1:
+        return () => debugPrint('Cartão virtual');
+      case 2:
+        return () => debugPrint('Cartão adicional');
+      case 3:
+        return () => debugPrint('Seguros');
+      case 4:
+        return () => debugPrint('Pacote SMS');
+      default:
+        return () => debugPrint('Erro');
     }
   }
 }

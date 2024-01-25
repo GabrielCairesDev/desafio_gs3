@@ -6,6 +6,9 @@ class DivisorPagina extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Divider(color: color, thickness: 1);
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Divider(color: color, thickness: 1),
+    );
   }
 }

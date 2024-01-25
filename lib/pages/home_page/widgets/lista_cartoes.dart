@@ -149,7 +149,7 @@ class ListaCartoes extends StatelessWidget {
     }
   }
 
-  String formatarMoeda(double valor) {
+  formatarMoeda(double valor) {
     var formatoMoeda = NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');
     return formatoMoeda.format(valor);
   }
