@@ -5,7 +5,7 @@ import 'package:desafio_gs3/pages/home_page/widgets/lista_cartoes.dart';
 import 'package:desafio_gs3/pages/home_page/widgets/lista_favoritos.dart';
 import 'package:desafio_gs3/pages/home_page/widgets/lista_ultimos_lancamentos.dart';
 import 'package:desafio_gs3/pages/home_page/widgets/mensagem_notificacao.dart';
-import 'package:desafio_gs3/pages/home_page/widgets/menu_favorito_cabecalho%20copy.dart';
+import 'package:desafio_gs3/pages/home_page/widgets/menu_favorito_cabecalho.dart';
 import 'package:desafio_gs3/pages/home_page/widgets/menu_icone.dart';
 import 'package:desafio_gs3/pages/home_page/widgets/menu_roda_pe.dart';
 import 'package:desafio_gs3/pages/home_page/widgets/ultimos_lancamentos_cabecalho.dart';
@@ -31,14 +31,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackGround(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 54),
+    return SafeArea(
+      child: Scaffold(
+        body: BackGround(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 32),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
@@ -75,15 +75,15 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: AnimatedBuilder(
-        animation: controlador,
-        builder: (context, _) {
-          return MenuRodaPe(
-            index: controlador.paginaIndex,
-            menusTrocar: controlador.menuTrocar,
-          );
-        },
+        bottomNavigationBar: AnimatedBuilder(
+          animation: controlador,
+          builder: (context, _) {
+            return MenuRodaPe(
+              index: controlador.paginaIndex,
+              menusTrocar: controlador.menuTrocar,
+            );
+          },
+        ),
       ),
     );
   }

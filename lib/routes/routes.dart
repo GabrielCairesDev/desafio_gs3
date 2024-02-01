@@ -1,4 +1,4 @@
-import 'package:desafio_gs3/pages/home_page/home_page.dart';
+import 'package:desafio_gs3/pages/home_page/page/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -6,7 +6,7 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> routes() {
     return {
-      home: (context) => HomePage(),
+      home: (context) => const HomePage(),
     };
   }
 }
